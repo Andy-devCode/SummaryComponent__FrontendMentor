@@ -19,12 +19,6 @@
     --LightLavender: hsl(241, 100%, 89%);
     --DarkGrayBlue: hsl(224, 30%, 27%);
 }
-/*Remember*/
-
-/*
-- Mobile: 375px
-- Desktop: 1440px 
-*/
 
 *{
     padding: 0;
@@ -34,6 +28,11 @@
 .html{
     font-size: 62.5%;
 }
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
 p{
     font-size: 18px;
 }
@@ -41,15 +40,19 @@ p{
     display: grid;
     justify-content: center;
     grid-template-columns: 375px;
-    grid-template-rows: repeat(2, 390px) ;
+    grid-template-rows: repeat(2, 390px);
+    grid-template-areas: 
+    "blue"
+    "white";
 }
 .summary__container-blue{
-    grid-row: 1/2;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;  
+    grid-area: "blue";
+    gap: 25px;
+    height: 100%;  
     background: linear-gradient(to top, var( --LightRoyalBlue) 50%, var(--LightSlateBlue) 100%);
     border-radius: 0  0 30px 30px;
 }
@@ -94,17 +97,17 @@ p{
     width: 60%;
 }
 .summary__container-white{
-    grid-row: 2/3;
     display: flex;
     flex-direction: column;
     align-items: center;
+    grid-area: "white";
     background-color: var(--White);
 }
 .summary__container-white--tittle{
     align-self: left;
     width: 90%;
-    margin: 15px 0;
-    font-size: 15px;
+    padding: 25px 0 15px 0;
+    font-size: 25px;
     color: var(--DarkGrayBlue);
 }
 .summary__container-white--score{
