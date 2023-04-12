@@ -24,6 +24,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
 }
 .html{
     font-size: 62.5%;
@@ -79,7 +80,7 @@ p{
 .summary__container-blue--score .score{
     margin: 15px 0 10px 0;
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 800;
     color: var(--White);
 }
 .summary__container-blue .top-score{
@@ -94,7 +95,7 @@ p{
 .summary__container-blue--text2{
     font-size: 15px;
     color: var(--LightLavender);
-    width: 60%;
+    width: 70%;
 }
 .summary__container-white{
     display: flex;
